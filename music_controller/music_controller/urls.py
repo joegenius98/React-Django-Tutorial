@@ -19,8 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     # /admin/..../ sends /... -> admin.site.urls
     path('admin/', admin.site.urls),
-    # whatever comes after api (after the slash) is dispatched to api folders --> urls.py
+    # whatever comes after api (after the slash) is dispatched to api folder --> urls.py
     path('api/', include('api.urls')),
+
+    # dispatch to frontend folder --> urls.py
     path('', include('frontend.urls'))
 ]
 

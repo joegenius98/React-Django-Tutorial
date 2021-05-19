@@ -8,7 +8,7 @@ from .models import Room
 
 
 # not only view, but create room (that's what generics does)
-# generics.CreateAPIView is an already-created view that returns to us all of the different rooms
+# generics.ListAPIView is an already-created view that returns to us all of the different rooms
 # vs. generics.createAPIView allowed us to add information to the database
 class RoomView(generics.ListAPIView):
     queryset = Room.objects.all()  # we want to return all of the room objects

@@ -27,7 +27,6 @@ Following https://youtu.be/JD-age0BPVo playlist
 ## Tutorial Two: Django REST Framework (REST API)-API Endpoints-Database Model
 
 - implemented [models.py](api/models.py), which sets up the fields to be displayed for creating new rooms
-
 - implemented [serializers.py](api/serializers.py), which converts data types on the browser to JSON-data type
 - implemented [views.py](api/views.py) to
 - implemented [urls.py](api/urls.py) to display Room with `RoomView.as_view()`
@@ -72,13 +71,16 @@ Following https://youtu.be/JD-age0BPVo playlist
 
 # File/Directory Structure
 
-| File/Directory                                                         | Description                                                                                                                   |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [api](music_controller/api)                                            | Our database/model (class implementation in Django)/REST API.                                                                 |
-| [frontend](music_controller/frontend)                                  | React frontend to visually display our music controller app.                                                                  |
-| [music_controller/music_controller](music_controller/music_controller) | Administers app as a whole (e.g. we include `INSTALLED_APPS` in [settings.py](music_controller/music_controller/settings.py)) |
+| File/Directory                                                         | Description                                                                                                                  |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| [api](music_controller/api)                                            | Our database/model (class implementation in Django)/REST API.                                                                |
+| [frontend](music_controller/frontend)                                  | React frontend to visually display our music controller app.                                                                 |
+| [music_controller/music_controller](music_controller/music_controller) | Administers app as a whole (e.g. we include`INSTALLED_APPS` in [settings.py](music_controller/music_controller/settings.py)) |
+| [frontend/static/frontend](music_controller/frontend/static/frontend)  | contains the bundle of all our JavaScript that actually runs the frontend (comes from source code)                           |
+| [frontend/src/components](music_controller/frontend/src/components)    | contains React components, such as the HomePage, RoomJoinPage, etc.                                                          |
 
-| [frontend/static/frontend](music_controller/frontend/static/frontend) | ... |
-| [frontend/static/css](music_controller/frontend/static/frontend) | contains the bundle of all our JavaScript that actually runs the frontend (comes from source code) |
-| [frontend/static/css](music_controller/frontend/static/images) | ... |
-| [frontend/src/components](music_controller/frontend/src/components) | contains React components |
+|
+
+# Visual Diagram Explanation
+
+![Image showing how the different web components talk to each other (e.g. POST/GET requests)](visual_diagram.jpg)
